@@ -3,11 +3,11 @@ import requests
 from PIL import Image
 from io import BytesIO
 
+
 LARGE_SCALE = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`\'. '
-
-SMALL_SCALE = ' .:-=+*#%@'[::-1]
-
+SMALL_SCALE = '@%#*+=-:. '
 SCALE = LARGE_SCALE
+
 
 def image_to_text(image_to_transform, image_type):
     if image_type == '1':
@@ -28,6 +28,7 @@ def image_to_text(image_to_transform, image_type):
         text += '\n'
     return text
 
+
 if __name__ == '__main__':
     print('1: Path')
     print('2: Link')
@@ -42,13 +43,3 @@ if __name__ == '__main__':
     file = open('image.txt', 'w')
     file.write(picture)
     file.close()
-
-            
-                
-    
-    
-                
-            
-            
-            
-            
